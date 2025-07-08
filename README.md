@@ -1,12 +1,16 @@
 # Prediction-using-Machine-Learning
 Blood Clot Prediction using Machine Learning
+
 Author: Kabi Veronicah
+
 Date: July 8, 2025
 
-Objective
+Objective:
+
 To build a machine learning model that predicts the presence of a blood clot in patients based on medical features such as D-dimer levels, platelet count, blood pressure, and lifestyle indicators like smoking and diabetes.
 
-Dataset
+Dataset:
+
 Source: Simulated dataset with 500 patient records
 
 Features:
@@ -23,7 +27,8 @@ Clot cases: 50 (10%)
 
 Non-clot cases: 450 (90%)
 
-Models Applied
+Models Applied:
+
 Logistic Regression:Logistic Regression was initially used to model the clot prediction task. While it performed well in terms of overall accuracy, it struggled with recall on the minority class (clot present). As a result, more robust classifiers like Random Forest and XGBoost were implemented. These models significantly improved clot detection performance, especially after threshold tuning and class balancing.
 
 Random Forest Classifier (with and without SMOTE)
@@ -43,7 +48,8 @@ Accuracy: 94%
 
 ROC AUC: ~0.84
 
-Key Findings
+Key Findings:
+
 XGBoost with original training data (no SMOTE) and threshold adjustment to 0.4 produced the most balanced results.
 
 The model achieves high precision and acceptable recall, meaning:
@@ -54,5 +60,6 @@ Using SMOTE improved recall but led to higher false positives.
 
 Threshold tuning was crucial to optimize the trade-off between recall and precision, which is critical in medical predictions.
 
-Conclusion
+Conclusion:
+
 The final XGBoost model performs reliably, with 94% accuracy and a 61% recall rate for detecting clots. This balance between sensitivity and specificity makes it suitable for early screening in medical contexts, where missing true clots is riskier than false alarms.
